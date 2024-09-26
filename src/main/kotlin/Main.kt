@@ -68,7 +68,7 @@ fun AppPreview() {
 }
 
 fun main() = application {
-    Window(onCloseRequest = ::exitApplication) {
+    Window(onCloseRequest = ::exitApplication, title = "WP_ChangeStyle") {
         MyApp()
     }
 }
