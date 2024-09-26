@@ -11,25 +11,19 @@ import androidx.compose.ui.window.application
 
 // Цветовые схемы для светлой и темной тем
 private val LightColors = lightColors(
-    primary = Color(0xFF6200EE),    // Основной цвет для светлой темы
-    primaryVariant = Color(0xFF3700B3),
-    secondary = Color(0xFF03DAC5),
+    primary = Color(0xFF6200EE),    // Основной цвет, который чаще всего используется для элементов интерфейса (например, для кнопок или заголовков).
     background = Color(0xFFFFFFFF), // Белый фон для светлой темы
-    surface = Color(0xFFFFFFFF),
-    onPrimary = Color.White,
-    onSecondary = Color.Black,
-    onBackground = Color.Black,
-    onSurface = Color.Black,
+    surface = Color(0xFFFFFFFF), // Цвет поверхностей, например, карточек, диалоговых окон, кнопок и т. д.
+    onPrimary = Color.White, //  Цвет, который используется для текста и иконок, отображаемых поверх элементов, использующих primary (основной цвет).
+    onBackground = Color.Black, // Цвет текста и элементов, которые отображаются поверх фонового цвета (background).
+    onSurface = Color.Black, // Цвет текста и иконок, отображаемых поверх элементов, которые используют цвет surface.
 )
 
 private val DarkColors = darkColors(
     primary = Color(0xFFBB86FC),    // Основной цвет для темной темы
-    primaryVariant = Color(0xFF3700B3),
-    secondary = Color(0xFF03DAC5),
     background = Color(0xFF121212), // Темный фон
     surface = Color(0xFF121212),
     onPrimary = Color.Black,
-    onSecondary = Color.White,
     onBackground = Color.White,
     onSurface = Color.White,
 )
@@ -38,7 +32,7 @@ private val DarkColors = darkColors(
 fun MyApp() {
     var isDarkTheme by remember { mutableStateOf(false) }  // Переменная для хранения текущей темы
 
-    // Применяем выбранную цветовую схему
+    // Тут применяем выбранную цветовую схему
     MaterialTheme(
         colors = if (isDarkTheme) DarkColors else LightColors,
     ) {
@@ -64,7 +58,6 @@ fun MyApp() {
             }
         }
     }
-
 
 }
 
